@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/vbscript">
+
+sub mySub(n)
+x=MsgBox("Hello world",n,"Result")
+
+end sub
+
+</script>
+</head>
+<body>
+
+<div id="myDiv"> </div>
+Buttonsets:<br />
+<button onclick="mySub(1)">Messagebox</button> 1 = OK and Cancel buttons<br />
+<button onclick="mySub(2)">Messagebox</button> 2 = Abort, Retry, and Ignore buttons<br />
+<button onclick="mySub(3)">Messagebox</button> 3 = Yes, No, and Cancel  buttons<br />
+<button onclick="mySub(4)">Messagebox</button> 4 = Yes and No buttons<br />
+<button onclick="mySub(5)">Messagebox</button> 5 = Retry and Cancel buttons<br />
+Icons:<br />
+<button onclick="mySub(20)">Messagebox</button> 16 = Critical message icon<br />
+<button onclick="mySub(36)">Messagebox</button> 32 = Warning Query icon<br />
+<button onclick="mySub(52)">Messagebox</button> 48 = Warning Message icon<br />
+<button onclick="mySub(68)">Messagebox</button> 64 = Information Message<br />
+Combine buttonsets and icons:<br />
+<button onclick="mySub(20)">Messagebox</button> 20 = Critical message icon(16) with Yes and No buttons(4)<br />
+<button onclick="mySub(34)">Messagebox</button> 34 = Warning Query icon(32) with Abort, Retry, and Ignore buttons(2)<br />
+</body>
+</html>

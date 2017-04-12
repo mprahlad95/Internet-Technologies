@@ -1,0 +1,37 @@
+<html>
+ <head>
+ <title>Using VBScript Arrays</title>
+ <script type = "text/vbscript">
+ 
+ Option Explicit
+ Public Sub DisplayArray( x, s )
+ Dim j
+ document.Write( s & ": " )
+ For j = 0 To UBound( x )
+ document.Write( x( j ) & " " )
+ 
+ Next
+ document.Write( "<br />" )
+ End Sub
+ Dim fixedSize( 3 ), fixedArray, dynamic(), k
+ ReDim dynamic( 3 ) ' Dynamically size array
+ fixedArray = Array( "A", "B", "C" )
+ ' Populate arrays with values
+ For k = 0 to UBound( fixedSize )
+ fixedSize( k ) = 50 - k
+ dynamic( k ) = Chr( 75 + k )
+ Next
+ ' Display contents of arrays
+ Call DisplayArray( fixedSize, "fixedSize" )
+ Call DisplayArray( fixedArray, "fixedArray" )
+ Call DisplayArray( dynamic, "dynamic" )
+ ' Resize dynamic, preserve current values
+ ReDim Preserve dynamic( 5 )
+ dynamic( 3 ) = 3.343
+ dynamic( 4 ) = 77.37443
+ Call DisplayArray( dynamic, _
+ "dynamic after ReDim Preserve" )
+ 
+ </script>
+ </head><body></body>
+ </html>

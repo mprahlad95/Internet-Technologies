@@ -1,0 +1,30 @@
+body{
+	color : black;
+	font-family : Sans-serif;
+	background-image : url("kmc.jpg");
+}
+/* or the following could be applied 
+
+* {
+	color : blue;
+	font-family : Sans-serif;
+	background-image : url("MITPicture.gif");
+}
+
+*/
+a:link{
+	color : red;
+	text-decoration : none;
+}
+a:hover 
+{
+	text-decoration:underline;
+}
+a:visited{
+	color:red;
+	text-decoration : none;
+}
+h1 {
+	border-style: solid;
+	border-color : black;  /*for visibility */
+}

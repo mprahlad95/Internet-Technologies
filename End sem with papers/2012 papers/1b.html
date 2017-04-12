@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function change()
+		{var result="";
+			var letter = document.getElementById("word").value;
+			for(var i=0;i<3;i++)
+			{
+				for(var j=0;j<3;j++)
+				{
+					for(var k=0;k<3;k++)
+					{
+						if(i==j || j==k || k==i)
+						continue;
+						else 
+						result=result + " " +letter.charAt(i)+letter.charAt(j)+letter.charAt(k);
+						
+					}
+				}
+			}
+			document.getElementById("result").value=result;
+		}
+	</script>
+</head>
+<body>
+	enter word : <input type="text" id="word"/><br><br>
+	<input type="submit" onclick="change()"/><br><br>
+	result : <textarea id="result"></textarea>
+	
+</body>
+</html>

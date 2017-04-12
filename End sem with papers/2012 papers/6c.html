@@ -1,0 +1,64 @@
+<!--
+COLSPAN : how many across, merge cells horizontally 
+The colspan attribute defines the number of columns a cell should span.
+
+ROWSPAN :  how many down, merger cells vertically 
+The rowspan attribute specifies the number of rows a cell should span
+
+rowspan = "2"
+two vertically adjacent cells
+
+colspan="2"
+two horizontally adjacent cells
+-->
+<html>
+<head>
+</head>
+<body>
+	<h1> html table example </h1>
+	<table border="1">
+		<caption>complex table </caption>
+		<!-- colgroup and col is used to format entire coloumns -->
+		<colgroup>
+			<col span="1" align="right"/>
+			<!-- span tells how many coloumns -->
+		</colgroup>
+		<thead>
+			<tr>
+				<th rowspan="2">
+					<img src="camel.jpg" alt="picture of a camel"/>
+				</th>
+				<th colspan="4" valign="middle">
+					<h1>camelid comparision<h1><br>
+				</th>
+			</tr>
+			<tr valign="bottom">
+				<th>col1 </th>
+				<th> col2 </th>
+				<th> col3 </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th> camels(bactrian)</th>
+				<td>2</td>
+				<td>africa/asia</td>
+				<td rowspan="2">llama </td>
+				<td rowspan="2">llama </td>
+				
+			</tr>
+			<tr>
+				<th> llamas </th>
+				<td>1</td>
+				<td>andes mountains</td>
+			<!-- adding another cell here will misalign the alignment -->
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="5">footer goes here </th>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

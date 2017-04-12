@@ -1,0 +1,18 @@
+<h1>Telephone number</h1>
+<button onclick="input()">Click to input</button><br><br>
+
+<b>Area Code: <input type="textfield" rows=5 cols=50 id="area"></input> &nbsp
+Phone number:</b> <input type="textfield" rows=5 cols=50 id="number"></input>
+<script>
+var s,i,res,res1;
+function input()
+       {
+       s=window.prompt("Please enter the telephone number in \"(xxx) yyy-zzzz\" format");
+       res=s.split(" ");
+	   document.getElementById("area").value=res[0];
+	   //s=s.substring(5);
+	   //res1=s.split();
+       document.getElementById("number").value=res[1];
+	  }
+
+</script>

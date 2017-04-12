@@ -1,0 +1,51 @@
+<html>
+<head>
+
+<!-- LOGIC :
+we have to generate random number between 0 and 4 because string indices start from 0 and go till 4, so we multiply by 4-->
+
+	<script type="text/javascript">
+		function change()
+		{
+			var article = ["the","a","one","some","any"];
+			var noun = ["boy","girl","dog","town","car"];
+			var verb = ["drove","jumped","ran","walked","skipped"];
+			var preposition = ["to","from","over","under","on"];
+			
+			var sentence="";
+			for(var i = 0;i<20;i++)
+			{
+			var ran1 = Math.floor((Math.random()*4)+1);
+			article[ran1] = convert(article[ran1]);
+			sentence= sentence + " " + article[ran1];
+			var ran2 = Math.floor((Math.random()*4)+1);
+			sentence= sentence + " " + noun[ran2];
+			var ran3 = Math.floor((Math.random()*4)+1);
+			sentence= sentence + " " + verb[ran3];
+			var ran4 = Math.floor((Math.random()*4)+1);
+			sentence= sentence + " " + preposition[ran4];
+			var ran5 = Math.floor((Math.random()*4)+1);
+			sentence= sentence + " "+ article[ran5];
+			var ran6 = Math.floor((Math.random()*4)+1);
+			sentence= sentence + " " + noun[ran6];
+			sentence[0] = sentence[0]+32; //for capitalize
+			sentence = sentence + "." + "\n";    //add a period at the end
+			
+			}
+			document.getElementById("result").value=sentence;
+		}
+		function convert(str)
+		{ //if str is shubhi
+		  // str.charAt(0) will give 's'. and toUpperCase will give 'S'.
+		  // so we need to add remaining string to it as well 
+		  // hence we need slice str(1) which will add from index 1 to the end
+			x = str.slice(1);
+			str = str.charAt(0).toUpperCase() + x;
+			return str;
+		}
+	</script>
+</head>
+<body onload="change()">
+	<textarea id="result" rows="20" cols="100"></textarea>
+</body>
+</html>

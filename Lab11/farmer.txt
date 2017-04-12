@@ -1,0 +1,4 @@
+FMID;market_name;web_address;street_address;city;state;zipcode;x;y
+1;hy;na;zoop;lko;up;221;1;221
+2;hy;na;zoop;lko;up;221;1;221
+3;hy;na;zoop;lko;up;221;1;221

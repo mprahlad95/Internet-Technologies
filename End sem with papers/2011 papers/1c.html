@@ -1,0 +1,44 @@
+<html>
+<head>	
+	
+</head>
+<body onload="change()">
+	<div id = "here"></div>
+	<script type="text/javascript">
+		var x = document.getElementById("here");
+			var font = 5;
+			var flag=false;
+		function change()
+		{
+			window.setInterval("update()",100);
+			
+		}
+		function update()
+		{ 	
+			
+			if((font <=50 )&& (flag == false))
+			{
+				font = font + 5;
+				x.style.color = "red";
+				x.style.fontSize = font + "px";
+ 				x.innerText="text growing";
+				if(font % 50 == 0)
+				flag = true;
+				
+				
+			}
+			else if ((font>=5)&&(flag==true))
+			{
+				font = font -5;
+				x.style.color = "blue";
+				x.style.fontSize = font + "px";
+				x.innerText="text shrinking";
+				if(font == 5)
+				flag = false;
+			}
+		
+			
+		}
+	</script>
+</body>	
+</html>

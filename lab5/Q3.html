@@ -1,0 +1,34 @@
+<title>Calculating Squares and Cubes</title>
+<style type="text/CSS">
+table, th, td
+{
+width: 50;
+height: 50;
+}
+span {
+	color: black;
+}
+</style>
+<form>
+<script type="text/javascript">
+var square;
+var cube;
+document.write("<table border='5'>");
+for (var n = 0; n <=10; n +=1){
+	square = n*n;
+	cube = n*n*n;	
+	document.write("<tr>");
+	document.write("<td>");
+	document.write(n);
+	document.write("</td>");
+	document.write("<td>");
+	document.write(square);
+	document.write("</td>");
+	document.write("<td>");
+	document.write(cube);
+	document.write("</td>");
+	document.write("</tr>");
+}	
+document.write("</table>");			
+</script>
+</form>

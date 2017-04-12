@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var total =0;
+			function change()
+			{
+				if(document.getElementById('science').checked)
+				{
+				total=total + 80;
+				window.status="science";
+				}
+				else if(document.getElementById('maths').checked)
+				{
+				total=total + 50;
+				window.status="maths";
+				}
+				else if(document.getElementById('politics').checked)
+				{
+				total=total + 40;
+				window.status="politics";
+				}
+				else if(document.getElementById('english').checked)
+				{
+				total=total + 30;
+				window.status="english";
+				}
+				else if(document.getElementById('hindi').checked)
+				{
+				total=total + 60;
+				window.status="hindi";
+				}
+			document.getElementById('total').value=total;
+			}
+		</script>
+	</head>
+	<body>
+	which book you want? <br>
+	Science 80	<input type="checkbox" name="book" id="science" value="science" onclick="change()"/><br>
+	Maths 50 :	<input type="checkbox" name="book" value="maths" id="maths" onclick="change()"/><br>
+	Politics 40 :	<input type="checkbox" name="book" value="politics" id="politics" onclick="change()"/><br>
+	English 30 :	<input type="checkbox" name="book" value="english" id="english" onclick="change()"/><br>
+	Hindi 60 :	<input type="checkbox" name="book" value="hindi" id="hindi" onclick="change()"/><br>
+	<br>
+	Total <input type="text" name="total" id = "total"/><br>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!--    toLocaleString()  -  Convert a Date object to a string, using locale conventions: -->
+
+
+<!--    getTime()  -  The getTime() method returns the number of milliseconds between midnight of January 1, 1970 and the specified date. -->
+
+
+<html>
+<head>
+</head>
+<body>
+	<p id = "here"></p>
+	<p id = "here1"></p>
+	<script type="text/javascript">
+		var d = new Date();
+		var n = d.toLocaleString();
+		document.getElementById("here").innerText = n;
+		var x = d.getTime();
+		document.getElementById("here1").innerText = x;
+	</script>
+</body>
+</html>

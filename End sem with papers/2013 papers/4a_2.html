@@ -1,0 +1,32 @@
+<html>
+<head>
+	<script type="text/vbscript">
+	<!--
+		Option Explicit
+		Sub btn()
+			Dim name,email,phone
+			name = Document.form1.name.Value
+			email = Document.form1.email.Value
+			phone = Document.form1.phone.Value
+			
+			Call MsgBox("hi",0,"result")
+			Set re = New RegExp
+			re.Pattern = "^[A-Z]{1}[a-zA-Z]+{9}"
+			if re.Test(name) Then
+				Call MsgBox("correct name ","result",,1000,1000)
+			else 
+				Call MsgBox("incorrect name","result",,1000,1000)
+			end if
+		end sub
+		-->	
+	</script>	
+</head>
+<body>
+	<form action="" name="form1">
+		name :<input type="text" name="name" /><br>
+		email :<input type="text" name="email"/><br>
+		phone :<input type="text" name="phone"/><br>
+		<button onclick="btn()" value="submit"/><br>
+	</form>
+</body>
+</html>

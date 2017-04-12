@@ -1,0 +1,43 @@
+<html>
+<head>
+	<script type="text/vbscript">
+		sub btn()
+			Dim n1,n2,n3,n4,num,temp,str1,str2,str3,str4,str
+			num = CInt(Document.Forms(0).enter.Value)
+			n1 = num Mod 10
+			num = num\10    
+			n2 = num Mod 10  
+			num = num\10    
+			n3 = num Mod 10 
+			num = num\10    
+			n4 = num Mod 10
+			n1 = n1 + 7
+			n1 = n1 Mod 10
+			n2 = n2 + 7
+			n2 = n2 Mod 10
+			n3 = n3 + 7
+			n3 = n3 Mod 10
+			n4 = n4 + 7
+			n4 = n4 Mod 10
+			temp = n1
+			n1 = n3 
+			n3 = temp
+			temp = n2
+			n2 = n4
+			n4 = temp
+			str1 = CStr(n1)
+			str2 = CStr(n2)
+			str3 = CStr(n3)
+			str4 = CStr(n4)
+			str = str1 & str2 & str3 & str4
+			Call MsgBox(str,0,"result")
+		end sub 
+			
+</head>
+<body>
+	<form action="">
+		enter four digit integer : <br><input type="text" name="enter"/><br>
+		<button onclick="btn()" value="submit"/>
+	</form>
+</body>
+</html>

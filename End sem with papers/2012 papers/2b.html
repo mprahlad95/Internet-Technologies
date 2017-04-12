@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function change()
+		{
+			var txtfile = "D:/emp.txt";
+			var file = new File(txtfile);
+			file.open("r");
+			var str="";
+			while(!file.eof)
+				{
+					str += file.readIn();
+				}
+			file.close();
+			console.log("fgbgfgf");
+			var res = str.split(",");
+			document.getElementById("name").value=res[0];
+			document.getElementById("number").value=res[1];
+			document.getElementById("designation").value=res[2];
+		}
+	</script>
+</head>
+<body onload="change()">
+	<div id="name" ></div>
+	<div id="number" ></div>
+	<div id="designation" ></div>
+</body>
+</html>

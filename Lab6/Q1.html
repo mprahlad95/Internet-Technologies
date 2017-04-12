@@ -1,0 +1,47 @@
+  <style type="text/css">
+   .nigg{ 
+		   margin-left:40%;
+		   margin-top:30%;
+		 } 
+  </style>
+ 
+    <p class="nigg" id="nigs" > </p><br/>
+	
+
+<script>
+      var a;
+	  var x=5;
+	  var flag=1;
+	  var i=0;
+      setInterval(writetxt,100);
+	  
+	  function writetxt()
+	  {
+	   if(x<=50 && flag==1)
+	   {
+	   a=document.getElementById("nigs");
+	   a.innerText= "Growing-text";
+	   a.style.fontSize = x+"px";
+	   a.style.color='red';
+	   x+=1;
+	   if(x==50) {flag=0;}
+	  }
+	  if (x>=5 && flag==0)
+	 {
+	  a=document.getElementById("nigs");
+	  a.innerText="Shrinking-Text";
+	  a.style.fontSize = x+"px";
+	  a.style.color='blue';
+	  x-=1;
+	  if(x==5) {flag=1;}
+	 }
+	 
+	 }
+	  
+  </script>
+ 
+
+ 
+ 
+	
+ 	 

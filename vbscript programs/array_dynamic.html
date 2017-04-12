@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script language="vbscript" type="text/vbscript">
+
+  Dim a()
+  i=0
+  redim a(5)
+  a(0)="XYZ"
+  a(1)=41.25
+  a(2)=22
+ 
+  REDIM  Preserve a(6)
+  For i=3 to 6
+  a(i)= i
+  Next
+  
+  'to Fetch the output
+  For i=0 to ubound(a)
+    Msgbox a(i)
+  Next
+</script>
+</body>
+</html>
+

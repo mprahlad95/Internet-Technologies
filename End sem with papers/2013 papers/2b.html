@@ -1,0 +1,24 @@
+<html>
+	<head> <!--DIFFERENCE BETWEEN INNERTEXT AND INNERHTML IS SHOWN HERE -->
+		
+		
+		
+		<script type="text/javascript">
+			function change()
+			{
+			par.innerHTML = "<b>hello</b>";  //innerHTML so entire paragraph output becomes bold hello
+			}
+			function change1()
+			{
+			par1.innerText = "<b> hello</b>";		//innertext so hello and bold tags both come in paragraph
+			}
+		</script>
+	</head>
+	<body>
+		<p id="par"> this is old text <br> new paragrapg </p>
+		<input type="button" onclick="change()" value="In_HTML">
+		<p id="par1">testing</p>
+		<input type="button" onclick="change1()" value="In_Text">
+	
+	</body>
+</html>

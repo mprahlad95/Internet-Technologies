@@ -1,0 +1,24 @@
+<h1>Three lettered permutations</h1>
+<button onclick="input()">Click to input</button><br><br>
+<textarea rows=30 cols=70 id="demo"></textarea>
+<script>
+var res,s,i,j,k,s1;
+function input()
+{    
+     s=window.prompt("Please enter a 5-lettered word");
+	 for(i=0;i<5;i++)
+	 {            
+       for(j=0;j<5;j++) 
+	   { 
+          for(k=0;k<5;k++)
+		  {     
+            if (i == j || i == k || j == k) continue;  
+            document.getElementById("demo").value+=s.charAt(i)+s.charAt(j)+s.charAt(k)+"\n";
+          }
+       }
+     }
+}
+</script>
+
+
+

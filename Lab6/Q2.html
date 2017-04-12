@@ -1,0 +1,23 @@
+<h1>English to pig-latin encoding</h1>
+<button onclick="input()">Click to input</button><br><br>
+<textarea rows=5 cols=50 id="demo"></textarea>
+<script>
+var s,i;
+var res;
+function input()
+       {
+       s=window.prompt("Please enter the string to be encoded");
+       res=s.split(" ");
+	   for(i=0;i<res.length;i++)
+	   printLatinWord(res[i]);
+	   }
+	   
+	  function printLatinWord(res)
+	   {
+	   var a=res.charAt(0);
+	   res=res.substring(1);
+	   document.getElementById("demo").value+= res+a+"ay ";
+	   }
+
+
+</script>
